@@ -171,7 +171,7 @@ MonoBehaviour:
   _entityPrefab: {fileID: 3038441190672327608, guid: 41cc451cbc1f6ad4e9013a1ee9ddf500,
     type: 3}
   _destinationThreshold: 4
-  _areaSize: {x: 20, y: 15, z: 15}
+  _areaSize: {x: 25, y: 15, z: 15}
   _velocityLimit: 4
   _accelerationWeights: {x: 6, y: 0.2, z: 0.1}
 --- !u!1 &330585543
@@ -252,7 +252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
