@@ -1,7 +1,9 @@
-﻿using Unity.Collections;
+﻿using Unity.Burst;
+using Unity.Collections;
 using Unity.Jobs;
 using UnityEngine;
 
+[BurstCompile]
 public struct AccelerationJob : IJobParallelFor
 {
     [ReadOnly] public NativeArray<Vector3> Positions;

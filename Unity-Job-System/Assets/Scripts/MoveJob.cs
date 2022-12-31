@@ -1,7 +1,9 @@
-﻿using Unity.Collections;
+﻿using Unity.Burst;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Jobs;
 
+[BurstCompile]
 public struct MoveJob : IJobParallelForTransform
 {
     public NativeArray<Vector3> Positions;
