@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 
-public class Entity : MonoBehaviour
+public class EntityView : MonoBehaviour
 {
-    [SerializeField] private Renderer _render;
-   
+    [SerializeField] private Renderer _renderer;
+
     private MaterialPropertyBlock _block;
 
-    private void Start()
+    public void SetColor()
     {
         _block = new MaterialPropertyBlock();
+
         _block.SetColor("_BaseColor", new Color(Random.value, Random.value, Random.value));
-        _render.SetPropertyBlock(_block);
+        _renderer.SetPropertyBlock(_block);
     }
+
 }
