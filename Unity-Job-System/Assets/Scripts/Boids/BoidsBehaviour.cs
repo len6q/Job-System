@@ -6,7 +6,7 @@ using UnityEngine.Jobs;
 public class BoidsBehaviour : MonoBehaviour
 {
     [SerializeField] private int _countEntities;
-    [SerializeField] private Entity _entityPrefab;
+    [SerializeField] private GameObject _entityPrefab;
     
     [SerializeField] private float _destinationThreshold;
     [SerializeField] private Vector3 _areaSize;
