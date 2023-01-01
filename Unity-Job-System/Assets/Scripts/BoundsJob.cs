@@ -1,7 +1,7 @@
-﻿using System;
-using Unity.Burst;
+﻿using Unity.Burst;
 using Unity.Collections;
 using Unity.Jobs;
+using Unity.Mathematics;
 using UnityEngine;
 
 [BurstCompile]
@@ -28,8 +28,8 @@ public struct BoundsJob : IJobParallelFor
     }
 
     private Vector3 Compensate(float delta, Vector3 direction)
-    {  
-        delta = Math.Abs(delta);
+    {
+        delta = math.abs(delta);
         if(delta > THRESHOLD)
         {
             return Vector3.zero;

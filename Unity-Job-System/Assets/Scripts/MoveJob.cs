@@ -2,6 +2,7 @@
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Jobs;
+using Unity.Mathematics;
 
 [BurstCompile]
 public struct MoveJob : IJobParallelForTransform
@@ -16,11 +17,11 @@ public struct MoveJob : IJobParallelForTransform
     {
         var velocity = Velocities[index] + Accelerations[index] * DeltaTime;
         var direction = velocity.normalized;
-        velocity = direction * Mathf.Clamp(velocity.magnitude, 1, VelocityLimit);
+        velocity = direction *  math.clamp(velocity.magnitude, 1, VelocityLimit);
 
-        transform.position += velocity * DeltaTime;
-        transform.rotation = Quaternion.LookRotation(direction);
-
+        transform.position += velocity * DeltaTime;        
+        transform.rotation = Quaternion.LookRotation(direction);     
+        
         Positions[index] = transform.position;
         Velocities[index] = velocity;
         Accelerations[index] = Vector3.zero;
